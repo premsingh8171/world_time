@@ -28,8 +28,8 @@ class WorldTime {
       isDayTime= 10 > 6 && 10 < 20 ? true: false;
       time = dayofweekName;
       //time = DateFormat.jm().format(now);
-      location = 'Rampur';
-      flag = 'India';
+      //location = 'Rampur';
+     // flag = 'India';
     } catch (e) {
       print('caught error:$e');
       time = 'could not get time data';
