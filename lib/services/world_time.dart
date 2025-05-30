@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:intl/intl.dart';
 
 class WorldTime {
   late String location;
@@ -20,7 +21,12 @@ class WorldTime {
       print('$data');
 
       String dayofweekName = data['dayofweekName'];
+      String fulldate = data['fulldate'];
+      //create date time object
+      //DateTime now= DateTime.parse(fulldate);
+
       time = dayofweekName;
+      //time = DateFormat.jm().format(now);
       location = 'Rampur';
       flag = 'India';
     } catch (e) {
