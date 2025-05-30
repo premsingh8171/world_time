@@ -31,10 +31,16 @@ String time = 'loading';
 void setUpWordTime() async{
   WorldTime instance =  WorldTime(location: "Berlin", flag: 'germany.png', url: 'Europe/Berlin');
   await instance.getTime();
-  print(instance.time);
+ // Navigator.pushNamed(context, '/home');
+  Navigator.pushReplacementNamed(context, '/home', arguments: {
+    'location' : instance.location,
+     'flag' :    instance.flag,
+      'time' :    instance.time,
+  });
+  /*print(instance.time);
   setState(() {
     time = instance.time;
-  });
+  });*/
 }
 
 

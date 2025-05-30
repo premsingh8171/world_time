@@ -21,6 +21,8 @@ class WorldTime {
 
       String dayofweekName = data['dayofweekName'];
       time = dayofweekName;
+      location = 'Rampur';
+      flag = 'India';
     } catch (e) {
       print('caught error:$e');
       time = 'could not get time data';
