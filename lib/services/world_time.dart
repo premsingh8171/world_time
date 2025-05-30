@@ -7,6 +7,7 @@ class WorldTime {
   late String time;
   late String flag;
   late String url;
+  late bool isDayTime;
 
   WorldTime({required this.location, required this.flag, required this.url});
 
@@ -24,7 +25,7 @@ class WorldTime {
       String fulldate = data['fulldate'];
       //create date time object
       //DateTime now= DateTime.parse(fulldate);
-
+      isDayTime= 10 > 6 && 10 < 20 ? true: false;
       time = dayofweekName;
       //time = DateFormat.jm().format(now);
       location = 'Rampur';
